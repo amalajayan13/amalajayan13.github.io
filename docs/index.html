@@ -1,43 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amal Ajayan | Research Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amal Ajayan | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
+  <header class="topbar">
+    <div class="container nav-wrap">
+      <nav class="nav">
+        <a class="active" href="index.html">Home</a>
+        <a href="pages/publications.html">Publications</a>
+        <a href="pages/tutorials.html">Tutorials</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-grid">
     <aside class="sidebar">
-      <img src="images/profile.jpg" alt="Profile Photo" class="profile">
+      <div class="profile-image-wrap">
+        <img src="images/profile.jpg" alt="Amal Ajayan" class="profile-image">
+      </div>
+
       <h1>Amal Ajayan</h1>
-      <p>Researcher | [Your Field]</p>
-      <p>Email: yourmail@example.com</p>
+      <p class="role">Researcher | Computer Science</p>
+      <p class="dept">Your Department / Institution Name</p>
+
+      <div class="contact-list">
+        <a href="#"><i class="fa-solid fa-location-dot"></i><span>Your City, State/Country</span></a>
+        <a href="mailto:yourmail@example.com"><i class="fa-solid fa-envelope"></i><span>yourmail@example.com</span></a>
+        <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i><span>LinkedIn</span></a>
+        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i><span>GitHub</span></a>
+        <a href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-graduation-cap"></i><span>Google Scholar</span></a>
+        <a href="https://orcid.org/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-orcid"></i><span>ORCID</span></a>
+        <a href="cv/Amal_Ajayan_CV.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i><span>CV</span></a>
+      </div>
     </aside>
 
-    <main class="content">
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="publications.html">Publications</a>
-      </nav>
-
-      <section>
+    <section class="content">
+      <section class="section-block">
         <h2>About Me</h2>
         <p>
-          I am interested in [your research interests]. This site presents my
-          research activities, publications, and academic work.
+          I am a researcher in computer science with interests in cybersecurity, artificial intelligence,
+          operating systems, and applied computing. This website presents my academic profile,
+          publications, projects, and professional activities.
+        </p>
+        <p>
+          You can replace this paragraph with a stronger professional bio, including your current role,
+          academic background, research focus, and long-term goals.
+        </p>
+        <p class="highlight">
+          I am open to research collaborations, internships, academic projects, and professional opportunities.
+          Please feel free to contact me by email.
         </p>
       </section>
 
-      <section>
+      <section class="section-block">
         <h2>Research Interests</h2>
         <ul>
-          <li>Topic 1</li>
-          <li>Topic 2</li>
-          <li>Topic 3</li>
+          <li>Cybersecurity and Secure Systems</li>
+          <li>Artificial Intelligence and Machine Learning</li>
+          <li>Operating Systems</li>
+          <li>Networks and Distributed Computing</li>
+          <li>Data Analytics</li>
         </ul>
       </section>
-    </main>
-  </div>
+
+      <section class="section-block">
+        <h2>Recent News</h2>
+        <ul class="news-list">
+          <li><span>[Apr 2026]</span> Add your latest academic or professional update here.</li>
+          <li><span>[Mar 2026]</span> Presented a paper / completed a project / attended a conference.</li>
+          <li><span>[Feb 2026]</span> Add an achievement, certification, publication, or internship milestone.</li>
+          <li><span>[Jan 2026]</span> Update this section regularly so the homepage stays active.</li>
+        </ul>
+      </section>
+    </section>
+  </main>
 </body>
 </html>
