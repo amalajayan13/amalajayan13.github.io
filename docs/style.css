@@ -233,5 +233,23 @@ img {
   .section-block li,
   .contact-list a {
     font-size: 1rem;
+     text-align: justify;
   }
+  /* #about p {
+  text-align: justify;
+} */
+.publication-list {
+  padding-left: 22px;
+}
+
+.publication-list li {
+  margin-bottom: 18px;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.publication-list strong {
+  font-weight: 700;
+}
+
 }
