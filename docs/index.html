@@ -3,7 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amal Ajayan | Portfolio</title>
+  <title>Amal Ajayan | Cybersecurity Researcher</title>
+  <meta name="description" content="Amal Ajayan, PhD scholar in cybersecurity at Amrita Vishwa Vidyapeetham. Research on explainable and lightweight intrusion detection, forensic-ready security and IoT security." />
+  <meta name="author" content="Amal Ajayan" />
+  <meta name="keywords" content="Amal Ajayan, cybersecurity, intrusion detection, explainable AI, digital forensics, IoT security, Amrita Vishwa Vidyapeetham" />
+  <meta property="og:title" content="Amal Ajayan | Cybersecurity Researcher" />
+  <meta property="og:description" content="Amal Ajayan, PhD scholar in cybersecurity at Amrita Vishwa Vidyapeetham. Research on explainable and lightweight intrusion detection, forensic-ready security and IoT security." />
+  <meta property="og:type" content="website" />
+  <script>
+    // Apply the saved theme before the page paints, so it doesn't flash.
+    try { var t = localStorage.getItem('theme');
+      if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) document.documentElement.classList.add('dark'); } catch (e) {}
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -13,14 +24,17 @@
 <body>
   <header class="topbar">
     <div class="container nav-wrap">
-      <nav class="nav">
+      <a class="brand" href="index.html">Amal Ajayan</a>
+      <nav class="nav" aria-label="Main">
         <a class="active" href="index.html">Home</a>
         <a href="pages/publications.html">Publications</a>
-        <!-- <a href="pages/tutorials.html">Tutorials</a> -->
       </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i><span class="theme-label">Dark</span></button>
+        <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+      </div>
     </div>
   </header>
-
   <main class="container main-grid">
     <aside class="sidebar">
       <div class="profile-image-wrap">
@@ -28,82 +42,130 @@
       </div>
 
       <h1>Amal Ajayan</h1>
-      <p class="role"> Cyber Security | Cyber Forensics</p>
-      <p class="dept">Amrita Vishwa Vidyapeetham, India</p>
-      <p class="dept">EMAT, Université de Moncton, Moncton, Canada</p>
-      <!-- <p class="dept">Machine Learning Department, Mohamed bin Zayed University of Artificial Intelligence, UAE</p> -->
+      <p class="role">Cyber Security &middot; Cyber Forensics</p>
+      <p class="dept">Research Fellow, Amrita Vishwa Vidyapeetham, India</p>
+      <p class="dept">EMAT, Université de Moncton, Canada</p>
 
       <div class="contact-list">
-        <a href="#"><i class="fa-solid fa-location-dot"></i><span>Kerala, India</span></a>
-        <a href="mailto:amalajayan100@gmail.com"><i class="fa-solid fa-envelope"></i><span>E-mail</span></a>
+        <a href="#" aria-disabled="true"><i class="fa-solid fa-location-dot"></i><span>Keralam, India</span></a>
+        <a href="mailto:amalajayan100@gmail.com"><i class="fa-solid fa-envelope"></i><span>amalajayan100[at]gmail[dot]com</span></a>
+        <a href="https://scholar.google.com/citations?hl=en&user=0WRhr_AAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-graduation-cap"></i><span>Google Scholar</span></a>
+        <a href="https://orcid.org/0009-0008-7809-7996" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-orcid"></i><span>ORCID</span></a>
         <a href="https://www.linkedin.com/in/amalajayan13" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i><span>LinkedIn</span></a>
         <a href="https://github.com/amalajayan13" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i><span>GitHub</span></a>
-        <a href="https://scholar.google.com/citations?hl=en&user=0WRhr_AAAAAJ&view_op=list_works&sortby=pubdate/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-graduation-cap"></i><span>Google Scholar</span></a>
-        <a href="https://orcid.org/0009-0008-7809-7996" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-orcid"></i><span>ORCID</span></a>
-        <!-- <a href="cv/Amal_Ajayan_CV.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i><span>CV</span></a> -->
       </div>
+
+      <!-- To show a CV button: put your PDF at docs/cv/Amal_Ajayan_CV.pdf and remove the comment marks below. -->
+      <!-- <a class="cv-btn" href="cv/Amal_Ajayan_CV.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-arrow-down"></i>Download CV</a> -->
     </aside>
 
-    <section class="content">
-      <section class="section-block">
+    <div class="content">
+      <section class="section-block" id="about">
         <h2>About Me</h2>
         <p>
-          I am Amal Ajayan, a cybersecurity researcher and PhD scholar at Amrita Vishwa Vidyapeetham, India, 
-          with growing international academic exposure across countries. My research interests 
-          include cybersecurity, digital forensics, network security, threat intelligence, cyber defense, and machine learning 
-          for security applications. With an academic background in Cyber Forensics and experience in research, publication, 
-          peer review, and mentoring, I aim to contribute to globally relevant, interdisciplinary, and impact-driven cybersecurity research. 
-          
+          I am a PhD scholar in cybersecurity at Amrita Vishwa Vidyapeetham, India, and a member of the
+          Applied Electromagnetics and Telecommunications Research Group (EMAT) at Université de Moncton, Canada.
+          From March to August 2026 I was a visiting research student at the Mohamed bin Zayed University of Artificial
+          Intelligence (MBZUAI), UAE.
         </p>
         <p>
-          
+          My research is on intrusion detection that security teams can trust and deploy: models that explain
+          their decisions, run on resource-constrained devices, and preserve evidence that holds up in a forensic
+          investigation. Recent work covers transformer-based detection of network intrusions and DDoS traffic,
+          tamper-evident alert logging, and federated detection across heterogeneous IoT devices. I hold B.Sc. and
+          M.Sc. degrees in Cyber Forensics from Mahatma Gandhi University, Keralam, where I was a university position holder,
+          and I have qualified the UGC-NET in Computer Science and Applications.
         </p>
-        <p class="highlight">
-          I welcome research collaborations, academic partnerships, and professional opportunities. 
-          Please feel free to contact me by email.
+        <p class="callout">
+          I welcome research collaborations, academic partnerships and professional opportunities.
+          Please get in touch by <a href="mailto:amalajayan100@gmail.com">email</a>.
         </p>
       </section>
 
-      <section class="section-block">
+      <section class="section-block" id="interests">
         <h2>Research Interests</h2>
-        <ul>
-          <li>Cybersecurity and Secure Systems</li>
-          <li>Digital Forensics and Cyber Investigation</li>
-          <li>Network Security, Intrusion Detection, and Threat Intelligence</li>
-          <li>Machine Learning for Cyber Defense</li>
-          <li>Explainable and Tiny Security Models</li>
+        <div class="chip-row">
+          <span class="interest">Explainable intrusion detection</span>
+          <span class="interest">Digital forensics &amp; forensic-ready security</span>
+          <span class="interest">IoT, IoMT &amp; edge security</span>
+          <span class="interest">Network traffic analysis &amp; malware detection</span>
+          <span class="interest">Threat intelligence</span>
+          <span class="interest">Lightweight (tiny) security models</span>
+        </div>
+      </section>
+
+      <section class="section-block" id="education">
+        <h2>Education &amp; Affiliations</h2>
+        <ul class="timeline">
+          <li><span class="date">2024 – Present</span>
+            <span>PhD in Cybersecurity, Amrita Vishwa Vidyapeetham, India
+              <span class="sub">Supervisor: <a href="https://scholar.google.co.in/citations?hl=en&user=UgnHeMEAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener noreferrer">Dr. Kirubavathi G</a></span></span></li>
+          <li><span class="date">Mar – Aug 2026</span>
+            <span>Visiting Student, Mohamed bin Zayed University of Artificial Intelligence (MBZUAI), UAE
+              <span class="sub">Supervisor: <a href="https://scholar.google.co.in/citations?hl=en&user=RigrYkcAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener noreferrer">Prof. Mohsen Guizani</a></span></span></li>
+          <li><span class="date">2025 – Present</span>
+            <span>Applied Electromagnetics and Telecommunications Research Group (EMAT), Université de Moncton, Canada
+              <span class="sub">Head: <a href="https://scholar.google.com/citations?hl=en&user=y3c3DwUAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener noreferrer">Prof. Habib Hamam</a></span></span></li>
+          <li><span class="date">2022 – 2024</span>
+            <span>M.Sc. in Cyber Forensics, Mahatma Gandhi University, Kerala, India <span class="badge">University Position Holder</span>
+              <span class="sub">Supervisor: <a href="https://scholar.google.com/citations?hl=en&user=nr94x2IAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener noreferrer">Dr. Abdul Muhammad Rasheed</a></span></span></li>
+          <li><span class="date">2019 – 2022</span>
+            <span>B.Sc. in Cyber Forensics, Mahatma Gandhi University, Kerala, India</span></li>
         </ul>
       </section>
 
-      <section class="section-block">
-        <h2>Education</h2>
-        <ul class="news-list">
-          <li>
-            <span>[2024–Present]</span> PhD in Cybersecurity, Amrita Vishwa Vidyapeetham, India.<br>
-            Supervisor: <a href="https://scholar.google.co.in/citations?hl=en&user=UgnHeMEAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener noreferrer">Dr. Kirubavathi G</a>
-          </li>
+      <section class="section-block" id="service">
+        <h2>Academic Service</h2>
 
-          <li>
-            <span>[2025–Present]</span> Applied Electromagnetics and Telecommunications Research Group (EMAT), Université de Moncton, Canada.
-            Head: <a href="https://scholar.google.com/citations?hl=en&user=y3c3DwUAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener noreferrer">Prof. Habib Hamam</a>
-          </li>
+        <h3 class="service-head">Journal Reviewer</h3>
+        <ul class="service-list">
+          <li>IEEE Transactions on Reliability <span class="venue">IEEE</span></li>
+          <li>Journal of Network and Computer Applications <span class="venue">Elsevier</span></li>
+          <li>Engineering Applications of Artificial Intelligence <span class="venue">Elsevier</span></li>
+          <li>Forensic Science International: Digital Investigation <span class="venue">Elsevier</span></li>
+          <li>IEEE Access <span class="venue">IEEE</span></li>
+          <li>Egyptian Informatics Journal <span class="venue">Elsevier</span></li>
+          <li>SN Computer Science <span class="venue">Springer Nature</span></li>
+          <li>KSII Transactions on Internet and Information Systems <span class="venue">KSII</span></li>
+          <li>International Journal of Electrical and Computer Engineering Systems <span class="venue">IJECES</span></li>
+        </ul>
+        <!-- <p class="note">Verified review records are listed on my <a href="https://orcid.org/0009-0008-7809-7996" target="_blank" rel="noopener noreferrer">ORCID profile</a>.</p> -->
 
-          <li>
-            <span>[March–August, 2026]</span> Visiting Student, Mohamed bin Zayed University of Artificial Intelligence (MBZUAI), UAE.
-            Supervisor: <a href="https://scholar.google.co.in/citations?hl=en&user=RigrYkcAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener noreferrer">Prof. Mohsen Guizani</a>
-          </li>
-          
-          <li>
-            <span>[2022–2024]</span> M.Sc. in Cyber Forensics, Mahatma Gandhi University, Kerala, India – University Position Holder.
-            Supervisor: <a href="https://scholar.google.com/citations?hl=en&user=nr94x2IAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener noreferrer">Prof. Abdul Muhammad Rasheed</a>
-          </li>
+        <!-- Technical Program Committee: add one <li> per conference, then remove the comment marks around this block. -->
+        <!-- <h3 class="service-head">Technical Program Committee Member</h3>
+        <ul class="service-list">
+          <li>Full Conference Name (ACRONYM 2026) <span class="venue">Publisher / sponsor</span></li>
+        </ul> -->
+        
 
-          <li>
-            <span>[2019–2022]</span> B.Sc. in Cyber Forensics, Mahatma Gandhi University, Kerala, India.
-          </li>
+        <h3 class="service-head">Professional Memberships</h3>
+        <ul class="service-list">
+          <li>IEEE <span class="venue">Graduate Student Member</span></li>
+          <li>IEEE Communications Society <span class="venue">Student Member</span></li>
+          <li>IEEE Young Professionals</li>
         </ul>
       </section>
-    </section>
+
+      <!--
+      Optional section. Fill in and remove the comment marks to show it.
+
+      <section class="section-block" id="mentoring">
+        <h2>Mentoring</h2>
+        <ul class="timeline">
+          <li><span class="date">2026</span><span>Student name – topic, venue</span></li>
+        </ul>
+      </section>
+      -->
+    </div>
   </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>&copy; <span id="year">2026</span> Amal Ajayan</span>
+      <!-- <span><a href="mailto:amalajayan100@gmail.com">amalajayan100@gmail.com</a></span> -->
+       <span><a>13</a></span>
+    </div>
+  </footer>
+  <script src="site.js"></script>
 </body>
 </html>

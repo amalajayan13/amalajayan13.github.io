@@ -4,125 +4,179 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Publications | Amal Ajayan</title>
+  <meta name="description" content="Journal articles, conference papers and design registrations by Amal Ajayan." />
+  <meta name="author" content="Amal Ajayan" />
+  <meta name="keywords" content="Amal Ajayan, cybersecurity, intrusion detection, explainable AI, digital forensics, IoT security, Amrita Vishwa Vidyapeetham" />
+  <meta property="og:title" content="Publications | Amal Ajayan" />
+  <meta property="og:description" content="Journal articles, conference papers and design registrations by Amal Ajayan." />
+  <meta property="og:type" content="website" />
+  <script>
+    // Apply the saved theme before the page paints, so it doesn't flash.
+    try { var t = localStorage.getItem('theme');
+      if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) document.documentElement.classList.add('dark'); } catch (e) {}
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
   <header class="topbar">
     <div class="container nav-wrap">
-      <nav class="nav">
+      <a class="brand" href="../index.html">Amal Ajayan</a>
+      <nav class="nav" aria-label="Main">
         <a href="../index.html">Home</a>
-        <!-- <a class="active" href="publications.html">Publications</a> -->
-        <!-- <a href="tutorials.html">Tutorials</a> -->
+        <a class="active" href="../pages/publications.html">Publications</a>
       </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i><span class="theme-label">Dark</span></button>
+        <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+      </div>
     </div>
   </header>
+  <main class="container page">
+    <section class="section-block">
+      <h2>Publications</h2>
+      <div class="pub-tabs" role="tablist" aria-label="Publication types">
+        <button class="pub-tab active" role="tab" data-show="all">All</button>
+        <button class="pub-tab" role="tab" data-show="J"></button>
+        <button class="pub-tab" role="tab" data-show="C"></button>
+        <button class="pub-tab" role="tab" data-show="P"></button>
+      </div>
 
-  <main class="container" style="padding: 46px 0 72px;">
-  <section class="section-block">
-    <h2>Publications</h2>
-    <h3>Journal publications</h3>
+      <!--
+        HOW TO ADD A PAPER
+        Put a new <li> at the TOP of the right list. The newest paper is numbered [J1], [C1], [P1]
+        and everything below renumbers automatically. The counts on the tabs also update by themselves.
+        Optional: data-status="To appear" on the <li> shows a small status tag,
+        e.g. for an accepted paper that has no DOI yet.
+      -->
 
-    <ul class="publication-list">
+      <div class="pub-group" data-type="J">
+        <h3>Journal Articles</h3>
+        <ol class="publication-list numbered" data-prefix="J">
+          <li>
+            Kirubavathi, G., Choi, J., Biju, A., <strong>Ajayan, A.</strong>, and Ismael, W. M.
+            "Deep feature selection and neural architectures for robust darknet traffic classification."
+            <em>Scientific Reports</em> (Springer Nature), 2026.
+            <a href="https://doi.org/10.1038/s41598-026-73927-4" target="_blank" rel="noopener noreferrer">DOI</a>
+          </li>
+          <li>
+            <strong>Ajayan, A.</strong>, Alotaibi, S., Guizani, S., Kirubavathi, G., Alalwan, A. I., and Hamam, H.
+            "FRX-IDS: An explainable intrusion detection framework with tamper-evident alert evidence logging."
+            <em>Array</em> (Elsevier), 2026.
+            <a href="https://doi.org/10.1016/j.array.2026.101089" target="_blank" rel="noopener noreferrer">DOI</a>
+          </li>
+          <li>
+            Guizani, S., Xavier, S., <strong>Ajayan, A.</strong>, Alalwan, A. I., and Hamam, H.
+            "A method for forensic-ready intrusion detection using explainable learning, prediction-aware graph modeling, and counterfactual analysis."
+            <em>MethodsX</em> (Elsevier), 2026.
+            <a href="https://doi.org/10.1016/j.mex.2026.103992" target="_blank" rel="noopener noreferrer">DOI</a>
+          </li>
+          <li>
+            <strong>Ajayan, A.</strong>, Kirubavathi, G., and Sarker, I. H.
+            "XNFT: Explainable Network Flow Transformer for Transparent Detection of DDoS Attacks in Real-World Networks."
+            <em>Computer Networks</em> (Elsevier), 2026.
+            <a href="https://doi.org/10.1016/j.comnet.2026.112224" target="_blank" rel="noopener noreferrer">DOI</a>
+          </li>
+          <li>
+            Rasheed, A. M., Kumar, R. M. S., Ganapathiyappan, K., <strong>Ajayan, A.</strong>, Rehman, A. U., et al.
+            "Securing resource-constrained IoMT devices with an ultra-lightweight cryptographic framework."
+            <em>PeerJ Computer Science</em> (PeerJ), 2026.
+            <a href="https://doi.org/10.7717/peerj-cs.3715" target="_blank" rel="noopener noreferrer">DOI</a>
+          </li>
+          <li>
+            Kirubavathi, G., Padma Mayuri, B., Pranathasree, S., Alagappan, R., <strong>Ajayan, A.</strong>, et al.
+            "Ensemble machine learning for proactive android ransomware detection using network traffic."
+            <em>Scientific Reports</em> (Springer Nature), 2026.
+            <a href="https://doi.org/10.1038/s41598-026-38271-7" target="_blank" rel="noopener noreferrer">DOI</a>
+          </li>
+          <li>
+            Rasheed, A. M., Kumar, R. M. S., and <strong>Ajayan, A.</strong>
+            "PSO-GWO Optimized Encryption Algorithm for Secure Medical Image Transmission in IoT-Cloud Healthcare Systems."
+            <em>KSII Transactions on Internet and Information Systems</em>, 2026.
+            <a href="https://doi.org/10.3837/tiis.2026.02.008" target="_blank" rel="noopener noreferrer">DOI</a>
+          </li>
+          <li>
+            <strong>Ajayan, A.</strong>, Kirubavathi, G., and Sarker, I. H.
+            "DistilXIDS: Efficient, lightweight and explainable transformer-based language model for real-time network intrusion detection."
+            <em>Neurocomputing</em> (Elsevier), 2025.
+            <a href="https://doi.org/10.1016/j.neucom.2025.132398" target="_blank" rel="noopener noreferrer">DOI</a>
+          </li>
+          <li>
+            Kirubavathi, G., Pulliyasseri, A., Rajesh, A., <strong>Ajayan, A.</strong>, Alfarhood, S., Safran, M., et al.
+            "Enhancing IoT Resilience at the Edge: A Resource-Efficient Framework for Real-Time Anomaly Detection in Streaming Data."
+            <em>Computer Modeling in Engineering &amp; Sciences</em> (Tech Science Press), 2025.
+            <a href="https://doi.org/10.32604/cmes.2025.065698" target="_blank" rel="noopener noreferrer">DOI</a>
+          </li>
+        </ol>
+      </div>
+
+      <div class="pub-group" data-type="C">
+        <h3>Conference Papers</h3>
+        <ol class="publication-list numbered" data-prefix="C">
+          <!--
+            Accepted 2026 papers: fill in authors and titles, then remove the comment marks around each one.
+
+          <li data-status="To appear">
+            AUTHORS, <strong>Ajayan, A.</strong>, ...
+            "Client-Specific Calibration for Federated IoT Intrusion Detection Under Device Heterogeneity."
+            <em>IEEE International Conference on ... (MECOM)</em>, 2026.
+          </li>
+          <li data-status="To appear">
+            AUTHORS. "TRACE-Edge: FULL TITLE." <em>IEEE ComComAp</em>, 2026.
+          </li>
+          <li data-status="To appear">
+            AUTHORS. "RENOUNCE-ZT: FULL TITLE." <em>ACS/IEEE International Conference on Computer Systems and Applications (AICCSA)</em>, 2026.
+          </li>
+          <li data-status="To appear">
+            AUTHORS. "FULL TITLE." <em>IEEE International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob)</em>, 2026.
+          </li>
+          <li data-status="To appear">
+            AUTHORS. "FULL TITLE." <em>iAIMS</em>, 2026.
+          </li>
+          -->
 
 
-      <li>
-        Kirubavathi, G., Choi, J., Biju, A., <strong>Ajayan, A.</strong>, Ismael, W. M.
-        "Deep feature selection and neural architectures for robust darknet traffic classification."
-        <em><b>Springer Nature</b>- Scientific Reports</em>, 2026.
-        <a href="https://doi.org/10.1038/s41598-026-73927-4" target="_blank" rel="noopener noreferrer">DOI</a>
-      </li>
-      
-      <li>
-        <strong>Ajayan, A.</strong>, Alotaibi, S., Guizani, S., Kirubavathi, G., Alalwan, A. I., and Hamam, H.
-        "FRX-IDS: An explainable intrusion detection framework with tamper-evident alert evidence logging."
-        <em><b>Elsevier</b>- Array</em>, 2026.
-        <a href="https://doi.org/10.1016/j.array.2026.101089" target="_blank" rel="noopener noreferrer">DOI</a>
-      </li>
+            <li>
+            <strong>Ajayan, A.</strong>, Hamam, H., and Guizani, M.
+            "UVIF-IoT: Calibrated and Feature-Efficient Intrusion Detection with Forensic Triage for IoT Edge Security."
+            <em>22nd International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob)</em>, Avignon, France, 2026.
+            <a href="https://doi.org/10.1109/WiMob70978.2026.11778033" target="_blank" rel="noopener noreferrer">DOI</a>
+          </li>
 
 
-      <li>
-        Guizani, S., Xavier, S., <strong>Ajayan, A.</strong>, Alalwan, A. I., and Hamam, H.
-        "A method for forensic-ready intrusion detection using explainable learning, prediction-aware graph modeling, and counterfactual analysis."
-        <em><b>Elsevier</b>- MethodsX</em>, 2026.
-        <a href="https://doi.org/10.1016/j.mex.2026.103992" target="_blank" rel="noopener noreferrer">DOI</a>
-      </li>
+          <li>
+            Maria, A., Kirubavathi, G., and <strong>Ajayan, A.</strong>
+            "Segmentation-Aware Hybrid CNN-ViT for Plant Leaf Disease Classification."
+            <em>IEEE International Conference on Recent Advancement in Electrical, Computer and Communication Technologies (IECCT)</em>, 2026.
+            <a href="https://doi.org/10.1109/IECCT68664.2026.11542021" target="_blank" rel="noopener noreferrer">DOI</a>
+          </li>
+        </ol>
+      </div>
 
-      <li>
-        <strong>Ajayan, A.</strong>, Kirubavathi, G., and Sarker, I. H.
-        "XNFT: Explainable Network Flow Transformer for Transparent Detection of DDoS Attacks in Real-World Networks."
-        <em><b>Elsevier</b>- Computer Networks</em>, 2026.
-        <a href="https://doi.org/10.1016/j.comnet.2026.112224" target="_blank" rel="noopener noreferrer">DOI</a>
-      </li>
+      <div class="pub-group" data-type="P">
+        <h3>Patents and Design Registrations</h3>
+        <ol class="publication-list numbered" data-prefix="P">
+          <li>
+            Rasheed, A. M., Kumar, R. M. S., <strong>Ajayan, A.</strong>, and Rajasree, G.
+            "Cyber Threat Predicting AI Device." Design Registration No. 482318-001,
+            <em>The Patent Office, Government of India</em>, 2026.
+          </li>
+        </ol>
+      </div>
 
-      <li>
-        Rasheed, A. M., Kumar, R. M. S., Ganapathiyappan, K.,
-        <strong>Ajayan, A.</strong>, Rehman, A. U., et al.
-        "Securing resource-constrained IoMT devices with an ultra-lightweight cryptographic framework."
-        <em><b>PeerJ</b>- PeerJ Computer Science</em>, 2026.
-        <a href="https://doi.org/10.7717/peerj-cs.3715" target="_blank" rel="noopener noreferrer">DOI</a>
-      </li>
-
-      <li>
-        Kirubavathi, G., Padma Mayuri, B., Pranathasree, S., Alagappan, R.,
-        <strong>Ajayan, A.</strong>, et al.
-        "Ensemble machine learning for proactive android ransomware detection using network traffic."
-        <em><b>Springer Nature</b>- Scientific Reports</em>, 2026.
-        <a href="https://doi.org/10.1038/s41598-026-38271-7" target="_blank" rel="noopener noreferrer">DOI</a>
-      </li>
-
-      <li>
-        Rasheed, A. M., Kumar, R. M. S., and <strong>Ajayan, A.</strong>
-        "PSO-GWO Optimized Encryption Algorithm for Secure Medical Image Transmission in IoT-Cloud Healthcare Systems."
-        <em><b>TIIS</b>- KSII Transactions on Internet and Information Systems</em>, 2026.
-        <a href="https://doi.org/10.3837/tiis.2026.02.008" target="_blank" rel="noopener noreferrer">DOI</a>
-      </li>
-
-      <li>
-        <strong>Ajayan, A.</strong>, Kirubavathi, G., and Sarker, I. H.
-        "DistilXIDS: Efficient, lightweight and explainable transformer-based language model for real-time network intrusion detection."
-        <em><b>Elsevier</b>- Neurocomputing</em>, 2025.
-        <a href="https://doi.org/10.1016/j.neucom.2025.132398" target="_blank" rel="noopener noreferrer">DOI</a>
-      </li>
-
-      <li>
-        Kirubavathi, G., Pulliyasseri, A., Rajesh, A., <strong>Ajayan, A.</strong>,
-        Alfarhood, S., Safran, M., et al.
-        "Enhancing IoT Resilience at the Edge: A Resource-Efficient Framework for Real-Time Anomaly Detection in Streaming Data."
-        <em><b>Tech Science Press</b>- Computer Modeling in Engineering &amp; Sciences</em>, 2025.
-        <a href="https://doi.org/10.32604/cmes.2025.065698" target="_blank" rel="noopener noreferrer">DOI</a>
-      </li>
-    </ul>
-
-    <h3>Patent publications</h3>
-    
-      <ul class="publication-list">
-
-      <li>
-        Rasheed, A. M., Kumar, R. M. S., <strong>Ajayan, A.</strong>, Rajasree G.
-        "Cyber Threat Predicting AI Device: 482318-001(Registration of Design)."
-        <em><b>The Patent Office, Government of India</b></em>, 2026.
-        <!-- <a href="https://www.linkedin.com/safety/go/?url=https%3A%2F%2Fsearch.ipindia.gov.in%2FAllRepresentationsheetview%2FPdf%2FGallery%3Ffid%3D%252FNt%252ByK8Kozq3ykEj%252FEdDOcr6%252Bg9m06dFBL3PrhtefeRARrdyCh0%252B6cgwHI1e%252BkgaGg4iKVDJoRoBKbdsRjPNd2icbaAvqHzsMQutKWdpYSA%253D%26aid%3DteNI6JOkFxTCiuRvBH%252F6jQjamdhTkyFQGxVYwb8w76g%253D&urlhash=xkpf&mt=clgZCEyhHyITKCVWZHEyzqMfbZMX5K60JecyZS8fLnahjs3dG6PkzoQLA-TTHxycwVHXrnPuyqZl7bptY5WxrYDu1Ww&isSdui=true&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_publications_details%3BGjrylCqzSeuHHOodPdD9Bw%3D%3D" target="_blank" rel="noopener noreferrer">Link</a> -->
-      </li>
-
-      </ul>
-
-    <h3>Conference publications</h3>
-    
-      <ul class="publication-list">
-
-      <li>
-        Maria, Ann., Kirubavathi, G., <strong>Ajayan, A.</strong>
-        "Segmentation-Aware Hybrid CNN-ViT for Plant Leaf Disease Classification."
-        <em><b>IEEE</b>- 2026 International Conference on Recent Advancement in Electrical, Computer and Communication Technologies (IECCT) </em>, 2026.
-        <a href="https://doi.org/10.1109/IECCT68664.2026.11542021" target="_blank" rel="noopener noreferrer">DOI</a>
-      </li>
-      
-    
-    </ul>
-  </section>
+      <!-- <p class="note">For the complete and most current list, see my <a href="https://scholar.google.com/citations?hl=en&user=0WRhr_AAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener noreferrer">Google Scholar profile</a>.</p> -->
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>&copy; <span id="year">2026</span> Amal Ajayan</span>
+      <span><a>13</a></span>
+    </div>
+  </footer>
+  <script src="../site.js"></script>
 </body>
 </html>
